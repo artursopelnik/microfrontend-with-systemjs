@@ -4,15 +4,17 @@ import './index.css'
 import {StrictMode, useEffect} from 'react'
 import {createRoot} from 'react-dom/client'
 import App from './App.tsx'
+import {UserConfigBase} from "./UserConfigBase.ts";
 
 let microFrontendPromise: Promise<void | System.Module> | null = null;
 export type MicroFe = {
     mount: (containerId: string) => void,
     unmount: (containerId: string) => void,
 };
+
 export const loadMicroFrontend = async (): Promise<MicroFe | undefined> => {
     if (!microFrontendPromise) {
-        microFrontendPromise = System.import("/vendor/mf-header.min.js")
+        microFrontendPromise = System.import(`${UserConfigBase}/vendor/mf-header.min.js`)
             .then((module: System.Module) => {
                 return {...module}
 

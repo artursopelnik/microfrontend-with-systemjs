@@ -1,8 +1,9 @@
-import { defineConfig } from 'vite'
+import {defineConfig} from 'vite'
 import react from '@vitejs/plugin-react'
+import {UserConfigBase} from "./src/UserConfigBase";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  base: '/microfrontend-with-systemjs/' // GitHub Pages Support https://github.com/sitek94/vite-deploy-demo
+    plugins: [react()],
+    base: UserConfigBase
 })

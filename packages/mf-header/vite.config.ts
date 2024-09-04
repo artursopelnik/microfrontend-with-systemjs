@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
+import {UserConfigBase} from "../../src/UserConfigBase";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -15,6 +16,7 @@ export default defineConfig({
       ]
     })
   ],
+  base: UserConfigBase,
   build: {
     cssCodeSplit: false,
     rollupOptions: {
