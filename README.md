@@ -7,8 +7,12 @@ https://dev.to/hamed-fatehi/how-to-implement-micro-frontends-using-systemjs-a-co
 The initial Boilerplate-code was created by vite with the following command
 $ `npm create vite@latest`
 
-## Setup
+## System Requirements
 
-$ `npm i`
+- Node 18+
+
+# Install dependencies and start development server
+
+$ `npm install`
 
 $ `npm run dev`
